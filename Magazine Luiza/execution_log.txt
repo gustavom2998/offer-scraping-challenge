@@ -1,0 +1,61 @@
+
+Inicio de execucao em:Mar 22 2021 00:35:59 com 12 threads.
+Produtos adquiridos ate agora: 0/17413
+4215 novos links acessados.
+Desligando a thread por 359s em: Mar 22 2021 01:09:54...
+
+Inicio de execucao em:Mar 22 2021 01:18:13 com 12 threads.
+Produtos adquiridos ate agora: 4215/17413
+16 novos links acessados.
+Desligando a thread por 331s em: Mar 22 2021 01:38:18...
+
+Inicio de execucao em:Mar 22 2021 01:43:49 com 12 threads.
+Produtos adquiridos ate agora: 4231/17413
+0 novos links acessados.
+Desligando a thread por 316s em: Mar 22 2021 02:04:57...
+
+Inicio de execucao em:Mar 22 2021 02:26:43 com 6 threads.
+Produtos adquiridos ate agora: 4231/17413
+0 novos links acessados.
+Desligando a thread por 913s em: Mar 22 2021 03:04:52...
+
+Inicio de execucao em:Mar 22 2021 03:20:05 com 6 threads.
+Produtos adquiridos ate agora: 4231/17413
+0 novos links acessados.
+Desligando a thread por 969s em: Mar 22 2021 03:56:18...
+
+Inicio de execucao em:Mar 22 2021 04:12:27 com 6 threads.
+Produtos adquiridos ate agora: 4231/17413
+0 novos links acessados.
+Desligando a thread por 941s em: Mar 22 2021 04:45:57...
+
+Inicio de execucao em:Mar 22 2021 05:01:38 com 6 threads.
+Produtos adquiridos ate agora: 4231/17413
+0 novos links acessados.
+Desligando a thread por 946s em: Mar 22 2021 05:35:24...
+
+Inicio de execucao em:Mar 22 2021 05:51:10 com 6 threads.
+Produtos adquiridos ate agora: 4231/17413
+0 novos links acessados.
+Desligando a thread por 992s em: Mar 22 2021 06:24:59...
+
+Inicio de execucao em:Mar 22 2021 06:41:31 com 6 threads.
+Produtos adquiridos ate agora: 4231/17413
+0 novos links acessados.
+Desligando a thread por 939s em: Mar 22 2021 07:09:46...
+
+Inicio de execucao em:Mar 22 2021 07:25:25 com 6 threads.
+Produtos adquiridos ate agora: 4231/17413
+0 novos links acessados.
+Desligando a thread por 996s em: Mar 22 2021 07:55:50...
+
+Inicio de execucao em:Mar 22 2021 08:12:26 com 6 threads.
+Produtos adquiridos ate agora: 4231/17413
+0 novos links acessados.
+Desligando a thread por 988s em: Mar 22 2021 08:43:00...
+
+Inicio de execucao em:Mar 22 2021 08:59:28 com 6 threads.
+Produtos adquiridos ate agora: 4231/17413
+0 novos links acessados.
+Desligando a thread por 927s em: Mar 22 2021 09:30:08...
+

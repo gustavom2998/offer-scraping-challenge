@@ -1,0 +1,18 @@
+
+Inicio de execucao em:Mar 22 2021 20:58:08 com 12 threads.
+
+Produtos adquiridos ate agora: 0/6080
+6076 novos links acessados.
+Desligando a thread por 935s em: Mar 22 2021 21:03:05...
+
+Inicio de execucao em:Mar 22 2021 21:04:05 com 12 threads.
+
+Produtos adquiridos ate agora: 6076/6080
+4 novos links acessados.
+Desligando a thread por 941s em: Mar 22 2021 21:04:08...
+
+Inicio de execucao em:Mar 22 2021 21:04:28 com 12 threads.
+
+Produtos adquiridos ate agora: 6080/6080
+0 novos links acessados.
+Desligando a thread por 989s em: Mar 22 2021 21:04:31...

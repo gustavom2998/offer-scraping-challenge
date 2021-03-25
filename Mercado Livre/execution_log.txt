@@ -1,0 +1,180 @@
+
+Inicio de execucao em:Mar 22 2021 01:53:09 com 12 threads.
+
+Produtos adquiridos ate agora: 0/16507
+10477 novos links acessados.
+Desligando a thread por 370s em: Mar 22 2021 02:30:36...
+
+Inicio de execucao em:Mar 22 2021 02:36:46 com 12 threads.
+
+Produtos adquiridos ate agora: 10477/16507
+988 novos links acessados.
+Desligando a thread por 309s em: Mar 22 2021 02:55:39...
+
+Inicio de execucao em:Mar 22 2021 03:00:48 com 12 threads.
+
+Produtos adquiridos ate agora: 11465/16507
+686 novos links acessados.
+Desligando a thread por 379s em: Mar 22 2021 03:16:32...
+
+Inicio de execucao em:Mar 22 2021 03:22:51 com 12 threads.
+
+Produtos adquiridos ate agora: 12151/16507
+425 novos links acessados.
+Desligando a thread por 325s em: Mar 22 2021 03:36:24...
+
+Inicio de execucao em:Mar 22 2021 03:39:24 com 6 threads.
+
+Produtos adquiridos ate agora: 12576/16507
+343 novos links acessados.
+Desligando a thread por 982s em: Mar 22 2021 04:01:45...
+
+Inicio de execucao em:Mar 22 2021 04:18:07 com 6 threads.
+
+Produtos adquiridos ate agora: 12919/16507
+187 novos links acessados.
+Desligando a thread por 928s em: Mar 22 2021 04:39:04...
+
+Inicio de execucao em:Mar 22 2021 04:54:36 com 6 threads.
+
+Produtos adquiridos ate agora: 13106/16507
+171 novos links acessados.
+Desligando a thread por 944s em: Mar 22 2021 05:14:09...
+
+Inicio de execucao em:Mar 22 2021 05:29:53 com 6 threads.
+
+Produtos adquiridos ate agora: 13277/16507
+160 novos links acessados.
+Desligando a thread por 934s em: Mar 22 2021 05:47:56...
+
+Inicio de execucao em:Mar 22 2021 06:03:30 com 6 threads.
+
+Produtos adquiridos ate agora: 13437/16507
+154 novos links acessados.
+Desligando a thread por 900s em: Mar 22 2021 06:21:30...
+
+Inicio de execucao em:Mar 22 2021 06:36:30 com 6 threads.
+
+Produtos adquiridos ate agora: 13591/16507
+140 novos links acessados.
+Desligando a thread por 932s em: Mar 22 2021 06:53:43...
+
+Inicio de execucao em:Mar 22 2021 07:09:15 com 6 threads.
+
+Produtos adquiridos ate agora: 13731/16507
+108 novos links acessados.
+Desligando a thread por 912s em: Mar 22 2021 07:26:43...
+
+Inicio de execucao em:Mar 22 2021 07:41:55 com 6 threads.
+
+Produtos adquiridos ate agora: 13839/16507
+82 novos links acessados.
+Desligando a thread por 980s em: Mar 22 2021 08:00:14...
+
+Inicio de execucao em:Mar 22 2021 08:16:34 com 6 threads.
+
+Produtos adquiridos ate agora: 13921/16507
+75 novos links acessados.
+Desligando a thread por 993s em: Mar 22 2021 08:35:31...
+
+Inicio de execucao em:Mar 22 2021 08:52:04 com 6 threads.
+
+Produtos adquiridos ate agora: 13996/16507
+81 novos links acessados.
+Desligando a thread por 951s em: Mar 22 2021 09:10:13...
+
+Inicio de execucao em:Mar 22 2021 09:26:04 com 6 threads.
+
+Produtos adquiridos ate agora: 14077/16507
+82 novos links acessados.
+Desligando a thread por 900s em: Mar 22 2021 09:43:12...
+
+Inicio de execucao em:Mar 22 2021 09:58:12 com 6 threads.
+
+Produtos adquiridos ate agora: 14159/16507
+44 novos links acessados.
+Desligando a thread por 990s em: Mar 22 2021 10:15:38...
+
+Inicio de execucao em:Mar 22 2021 10:32:08 com 6 threads.
+
+Produtos adquiridos ate agora: 14203/16507
+59 novos links acessados.
+Desligando a thread por 941s em: Mar 22 2021 10:49:26...
+
+Inicio de execucao em:Mar 22 2021 11:05:07 com 6 threads.
+
+Produtos adquiridos ate agora: 14262/16507
+40 novos links acessados.
+Desligando a thread por 998s em: Mar 22 2021 11:22:16...
+
+Inicio de execucao em:Mar 22 2021 11:38:54 com 6 threads.
+
+Produtos adquiridos ate agora: 14302/16507
+19 novos links acessados.
+Desligando a thread por 920s em: Mar 22 2021 11:56:26...
+
+Inicio de execucao em:Mar 22 2021 12:11:46 com 6 threads.
+
+Produtos adquiridos ate agora: 14321/16507
+21 novos links acessados.
+Desligando a thread por 981s em: Mar 22 2021 12:28:01...
+
+Inicio de execucao em:Mar 22 2021 12:44:22 com 6 threads.
+
+Produtos adquiridos ate agora: 14342/16507
+13 novos links acessados.
+Desligando a thread por 969s em: Mar 22 2021 13:00:52...
+
+Inicio de execucao em:Mar 22 2021 13:17:01 com 6 threads.
+
+Produtos adquiridos ate agora: 14355/16507
+14 novos links acessados.
+Desligando a thread por 998s em: Mar 22 2021 13:33:48...
+
+Inicio de execucao em:Mar 22 2021 13:50:26 com 6 threads.
+
+Produtos adquiridos ate agora: 14369/16507
+18 novos links acessados.
+Desligando a thread por 900s em: Mar 22 2021 14:06:47...
+
+Inicio de execucao em:Mar 22 2021 14:21:47 com 6 threads.
+
+Produtos adquiridos ate agora: 14387/16507
+2 novos links acessados.
+Desligando a thread por 998s em: Mar 22 2021 14:30:17...
+
+Inicio de execucao em:Mar 22 2021 21:16:15 com 12 threads.
+
+Produtos adquiridos ate agora: 14389/16507
+5 novos links acessados.
+Desligando a thread por 343s em: Mar 22 2021 21:23:54...
+
+Inicio de execucao em:Mar 22 2021 21:29:37 com 12 threads.
+
+Produtos adquiridos ate agora: 14394/16507
+8 novos links acessados.
+Desligando a thread por 350s em: Mar 22 2021 21:37:21...
+
+Inicio de execucao em:Mar 22 2021 21:54:45 com 12 threads.
+
+Produtos adquiridos ate agora: 14402/16507
+4 novos links acessados.
+Desligando a thread por 361s em: Mar 22 2021 22:02:10...
+
+Inicio de execucao em:Mar 22 2021 22:08:11 com 12 threads.
+
+Produtos adquiridos ate agora: 14406/16507
+2 novos links acessados.
+Desligando a thread por 323s em: Mar 22 2021 22:15:35...
+
+Inicio de execucao em:Mar 22 2021 22:20:58 com 12 threads.
+
+Produtos adquiridos ate agora: 14408/16507
+4 novos links acessados.
+Desligando a thread por 323s em: Mar 22 2021 22:28:20...
+
+Inicio de execucao em:Mar 22 2021 22:33:43 com 12 threads.
+
+Produtos adquiridos ate agora: 14412/16507
+0 novos links acessados.
+Desligando a thread por 303s em: Mar 22 2021 22:41:09...
