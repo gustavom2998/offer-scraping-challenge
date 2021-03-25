@@ -41,10 +41,15 @@ Em sequência, pode-se executar qualquer um dos scripts `update_CasasBahia.py`, 
 
 <div style="height: 0; padding-bottom: calc(53.85%); position:relative; width: 100%;"><iframe allow="autoplay; gyroscope;" allowfullscreen height="100%" referrerpolicy="strict-origin" src="https://www.kapwing.com/e/605ceb4c93e27f003dc65452" style="border:0; height:100%; left:0; overflow:hidden; position:absolute; top:0; width:100%" title="Embedded content made on Kapwing" width="100%"></iframe></div><p style="font-size: 12px; text-align: right;"></a></p>
 
+![alt text](https://www.kapwing.com/e/605ceb4c93e27f003dc65452)
+
 
 Quando estiver satisfeito com o número de links coletados (pode ser consultado através do log de execução), o script `MongoDB/upload_dados.py` pode ser utilizado para fazer o upload a um cluster do MongoDB Atlas. Para isso, é necessário ter configurado um cluster com usuários de acesso e também com IPs de acesso. Para confirmar que os resultados foram realmente disponibilizados na plataforma, mostramos abaixo o schema da coleção disponibilizada através do MongoDB Compass.
 
 <div style="height: 0; padding-bottom: calc(56.28%); position:relative; width: 100%;"><iframe allow="autoplay; gyroscope;" allowfullscreen height="100%" referrerpolicy="strict-origin" src="https://www.kapwing.com/e/605ca75d66daba0099d59109" style="border:0; height:100%; left:0; overflow:hidden; position:absolute; top:0; width:100%" title="Embedded content made on Kapwing" width="100%"></iframe></div><p style="font-size: 12px; text-align: right;"></a></p>
+
+![alt text](https://www.kapwing.com/e/605ca75d66daba0099d59109)
+
 
 Para este projeto, foram configurados dois usuários. Um para fins de administração, que poderia atualizar, remover e inserir dados. Outro usuário também foi criado, este com privilégios apenas de consultas. Este usuário foi disponibilizado, e qualquer um pode utilizar as informações para acessar e consultar o banco de dados. A configuração de acesso de rede foi feita de modo que qualquer um pode acessar o banco de dados.
 
@@ -76,6 +81,10 @@ Temos um exemplo de uma aplicação no Notebook Jupyter disponibilizado no arqui
 
 <div style="height: 0; padding-bottom: calc(56.25%); position:relative; width: 100%;"><iframe allow="autoplay; gyroscope;" allowfullscreen height="100%" referrerpolicy="strict-origin" src="https://www.kapwing.com/e/605cd625e0d2ff00d06a7c39" style="border:0; height:100%; left:0; overflow:hidden; position:absolute; top:0; width:100%" title="Embedded content made on Kapwing" width="100%"></iframe></div><p style="font-size: 12px; text-align: right;"></a></p>
 
+![alt text](https://www.kapwing.com/e/605cd625e0d2ff00d06a7c39)
+
 No mesmo arquivo de exemplo, uma consulta também foi escrita para encontrar o preço mínimo, médio e máximo de um produto nos quatro sites diferentes (Casas Bahia, Magazine Luiza, Mercado Livre e Produto Mercado Livre). Criamos uma aplicação dash que faz esta consulta para três marcas de celulares diferentes, e permite ver três gráficos interativos diferentes com um dropdown, que permite selecionar a marca do celular, que como consequência atualiza o gráfico.
 
 <div style="height: 0; padding-bottom: calc(56.25%); position:relative; width: 100%;"><iframe allow="autoplay; gyroscope;" allowfullscreen height="100%" referrerpolicy="strict-origin" src="https://www.kapwing.com/e/605cd79293e27f003dc638a2" style="border:0; height:100%; left:0; overflow:hidden; position:absolute; top:0; width:100%" title="Embedded content made on Kapwing" width="100%"></iframe></div><p style="font-size: 12px; text-align: right;"></a></p>
+
+![alt text](https://www.kapwing.com/e/605cd79293e27f003dc638a2)
