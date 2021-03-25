@@ -21,6 +21,7 @@ Segue uma breve descrição do desafio para contextualizar o problema.
 
 Vários arquivos diferentes foram criados para resovter este problema. Abaixo está uma lista que explica o objetivo dos principais arquivos e pastas destes diretórios. 
 
+* `GIFS/`: Pasta contendo os GIFs utilizados para o README.
 * `Casas Bahia/`: Diretório com CSV com dados coletados e dados não coletados para os sites da Casas Bahia, logs de coleta, logs de exceções. 
 * `Magazine Luiza/`: Diretório com CSV com dados coletados e dados não coletados para os sites da Magazine Luiza, logs de coleta, logs de exceções. 
 * `Mercado Livre/`:  Diretório com CSV com dados coletados e dados não coletados para os sites do Mercado Livre, logs de coleta, logs de exceções. 
@@ -39,16 +40,12 @@ O primeiro passo é executar o Script `prepara_offers.py`. Este script reinicia 
 
 Em sequência, pode-se executar qualquer um dos scripts `update_CasasBahia.py`, `update_MazineLuiza.py` ou  `update_MercadoLivre.py`. Eles podem ser executados em paralelo. Cada script inicia o processo de requisições utilizando todos os links, e pausa por um tempo (em torno) de 15 minutos. Cada script utiliza múltiplas threads, então pode ser pesado executar-los na máquina local. Seria interessante utilizar uma máquina virtual na nuvem com alto poder de processamento, assim um grande número de threads poderia ser utilizado. No GIF abaixo, um exemplo da execução dos scripts utilizando apenas 200 links de cada site foi disponibilizado. Para compreender o porque nem todos sites retornaram todos os links, veja a seção de resultados. Um pequeno corte foi adicionado para a coleta dos linkks da Magazine Luiza e Mercado Livre, pois eles são mais demorados. 
 
-<div style="height: 0; padding-bottom: calc(53.85%); position:relative; width: 100%;"><iframe allow="autoplay; gyroscope;" allowfullscreen height="100%" referrerpolicy="strict-origin" src="https://www.kapwing.com/e/605ceb4c93e27f003dc65452" style="border:0; height:100%; left:0; overflow:hidden; position:absolute; top:0; width:100%" title="Embedded content made on Kapwing" width="100%"></iframe></div><p style="font-size: 12px; text-align: right;"></a></p>
-
-![alt text](GIFS/teste_coleta)
+![alt text](GIFS/teste_coleta.gif)
 
 
 Quando estiver satisfeito com o número de links coletados (pode ser consultado através do log de execução), o script `MongoDB/upload_dados.py` pode ser utilizado para fazer o upload a um cluster do MongoDB Atlas. Para isso, é necessário ter configurado um cluster com usuários de acesso e também com IPs de acesso. Para confirmar que os resultados foram realmente disponibilizados na plataforma, mostramos abaixo o schema da coleção disponibilizada através do MongoDB Compass.
 
-<div style="height: 0; padding-bottom: calc(56.28%); position:relative; width: 100%;"><iframe allow="autoplay; gyroscope;" allowfullscreen height="100%" referrerpolicy="strict-origin" src="https://www.kapwing.com/e/605ca75d66daba0099d59109" style="border:0; height:100%; left:0; overflow:hidden; position:absolute; top:0; width:100%" title="Embedded content made on Kapwing" width="100%"></iframe></div><p style="font-size: 12px; text-align: right;"></a></p>
-
-![alt text](GIFS/teste_bd)
+![alt text](GIFS/teste_bd.gif)
 
 
 Para este projeto, foram configurados dois usuários. Um para fins de administração, que poderia atualizar, remover e inserir dados. Outro usuário também foi criado, este com privilégios apenas de consultas. Este usuário foi disponibilizado, e qualquer um pode utilizar as informações para acessar e consultar o banco de dados. A configuração de acesso de rede foi feita de modo que qualquer um pode acessar o banco de dados.
@@ -79,9 +76,9 @@ Para os links da Magazine Luiza conseguimos obter 4.231 de 17.413 links. Para a 
 
 Temos um exemplo de uma aplicação no Notebook Jupyter disponibilizado no arquivo `MongoDB/consumo_dados.ipynb`, que cria uma conexão com o banco de dados e define alguns queries escritas em Python. Utilizamos os queries para criar uma simples interface gráfica onde o usuário pode digitar os filtros que deseja utilizar, e o resultado da consulta é aberto como uma tabela no Dash. Observação: Para funcionar, é necessário ter configurado o Jupyter Dash. 
 
-![alt text](GIFS/teste_consulta)
+![alt text](GIFS/teste_consulta.gif)
 
 No mesmo arquivo de exemplo, uma consulta também foi escrita para encontrar o preço mínimo, médio e máximo de um produto nos quatro sites diferentes (Casas Bahia, Magazine Luiza, Mercado Livre e Produto Mercado Livre). Criamos uma aplicação dash que faz esta consulta para três marcas de celulares diferentes, e permite ver três gráficos interativos diferentes com um dropdown, que permite selecionar a marca do celular, que como consequência atualiza o gráfico.
 
 
-![alt text](GIFS/teste_plots)
+![alt text](GIFS/teste_plots.gif)
