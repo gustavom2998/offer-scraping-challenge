@@ -1,4 +1,4 @@
-# Desafio Birdie: Coleta de Oferta de Produtos
+# Desafio: Coleta de Oferta de Produtos
 Este repositório contém todo o conteúdo desenvolvido para o Desafio Técnico do processo seletivo de estágio como Engenheiro de dados da Birdie. 
 
 ## Resumo
