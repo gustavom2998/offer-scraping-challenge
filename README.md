@@ -1,54 +1,58 @@
-# Desafio: Coleta de Oferta de Produtos
-Este repositório contém todo o conteúdo desenvolvido para o Desafio Técnico do processo seletivo de estágio como Engenheiro de dados da Birdie. 
+# Technical Challange: Scraping Offers from E-commerce Products
 
-## Resumo
+English (EN) | [Portuguese (PT-BR)](./README-pt.md) 
+This repository contains all the content developed for the Technical Challenge for a Data Engineering internship role at Birdie (I got hired - yay).
 
-Para a coleta e preparo dos dados, a linguagem de programação *Python* foi utilizada. Os dados de links foram estruturados dentro do Python utilizando dataframes da biblioteca *Pandas*. O pacote *Requests*  foi utilizado para fazer requisições HTTP para obter o conteúdo das páginas disponibilizadas nos respectivos links, de cada linha do dataframe. A biblioteca *Beautiful Soup* foi utilizada para analisar e extrair os conteúdo de cada página, e os dados encontrados foram inseridos nas colunas vazias de cada linha do dataframe. Para agilizar o processo de coleta de dados, a biblioteca *Multiprocessing* foi utilizada para dividir a carga de trabalho entre múltiplas threads, onde cada thread recebe um subconjunto do dataframe e realiza o processo de requisição e análise (com as bibliotecas anteriormente mencionadas). Os dados foram reunidos e inseridos em um banco de dados *MongoDB*, que foi configurado através da plataforma online *MongoDB Atlas*.  A plataforma *MongoDB Compass* foi utilizada para simplificar o processo de consultar e gerenciar o banco de dados. Por último, para exemplificar um caso de uso do banco de dados, o *Jupyter Notebooks* (na versão Jupyter Lab) foi utilizado para conectar com o banco de dados, através do usuário público (que pode apenas fazer consultas). Para estabelecer a conexão, a biblioteca *PyMongo* foi utilizada. Utilizando as bibliotecas *Dash*, *Plotly* e *IPyWidgets*, duas aplicações foram criadas. A primeira permite fazer queries com diferentes filtros no banco de dados, sem o usuário ter que mexer no código. O usuário pode ainda ordenar, filtrar novamente, e baixar os dados obtidos do query. Outro exemplo foi feito, onde o usuário pode consultar dados de custos de produtos sobre diferentes marcas, obtendo o preço mais barato, mais caro, e médio para as ofertas. O resultado foi demonstrado graficamente em uma aplicação dash. 
+## Challenge Description
 
-## Descrição do Desafio
+Here's a brief description of the challenge to provide context for the problem:
 
-Segue uma breve descrição do desafio para contextualizar o problema.
+1. Download and store the content of a list of 40,000 offer URLs ([`offers.csv`](./offers.csv)).
+2. Extract and store at least the title and price of the products to make them queryable.
+3. Provide a way to query the stored content.
+4. Prepare a presentation about the architecture of the solution.
 
-1. Baixar e armazenar o conteúdo de uma lista de 40 mil URLs de ofertas (`offers.csv` - disponibilizado no repositório).
+The URLs contain offers from three large Brazilian e-commerce retailers. 
 
-2. Extrair e armazenar pelo menos o título e o preço dos produtos para que seja consultável. 
+## Tech Used
 
-3. Fornecer uma forma de consultar pelo conteúdo armazenado.
+For data collection and preparation, I used **Python**. The URLs provided via CSV were used to create a **Pandas** Dataframe structure with complementary data. The **Requests** package was used to make HTTP requests to retrieve the content of the pages provided in the respective links for each row in the dataframe. The **BeautifulSoup** library was used to parse the content from each page, and the data was inserted into the empty columns of each dataframe row.
 
-4. Preparar uma apresentação sobre a arquitetura da solução.
+To speed up the data collection process, the **Multiprocessing** library was used to distribute the workload among multiple threads. Each thread received a subset of the dataframe and carried out the process of running the requests and processing the results (using the aforementioned libraries). The data was collected and inserted into a **MongoDB** instance, which was configured and managed through the online platform **MongoDB Atlas**. The **MongoDB Compass** platform was used to simplify the process of querying and managing the database.
 
-## Arquivos Disponiblizados
+Finally, to exemplify a use case of the database, **Jupyter Notebooks** (Jupyter Lab version) were made to connect to the database via the public user (with read-only access). The **PyMongo** library was used to establish the connection. Using the **Dash**, **Plotly**, and **IPyWidgets** libraries, two applications were created. The first one allows users to make queries with different filters on the database without having to modify the code. Users can sort, filter again, and download the data obtained from the query. Another example was created where users can retrieve cost data for products from different brands, obtaining the lowest, highest, and average prices for the offers. The results were displayed graphically in a dash application.
 
-Vários arquivos diferentes foram criados para resolver este problema. Abaixo está uma lista que explica o objetivo dos principais arquivos e pastas destes diretórios. 
+## File Tree
 
-* `GIFS/`: Pasta contendo os GIFs utilizados para o README.
-* `Casas Bahia/`: Diretório com CSV com dados coletados e dados não coletados para os sites da Casas Bahia, logs de coleta, logs de exceções. 
-* `Magazine Luiza/`: Diretório com CSV com dados coletados e dados não coletados para os sites da Magazine Luiza, logs de coleta, logs de exceções. 
-* `Mercado Livre/`:  Diretório com CSV com dados coletados e dados não coletados para os sites do Mercado Livre, logs de coleta, logs de exceções. 
-* `MongoDB/`: Possui os script para criação do banco de dados e um notebook Jupyter que conecta ao banco de dados, e possuí queries, e uma aplicação muito básica de consulta com filtros, search, e exportação dos resultados. 
-* `header_rotation.py`: Utilizado para organizar os headers e lista de user agents, utilizado para as requisições HTTP. Contém funções para seleção de headers/user agents aleatórios.
-* `multithread_df.py`: Define uma função que recebe um dataframe e uma função. Múltiplas threads são utilizadas para dividir o dataframe e aplicar as operações da função sob o dataframe.
-* `parser.py`: Script contendo a função utilizada para iterar sobre os links. Para cada link, um request HTTP é feito e o conteúdo web retornado é analisado para extração de dados com o BeautifulSoup. 
-* `prepara_offers.py`: Primeiro script que deve ser executado neste repositório. Utiliza o `offers.csv` para obter os links e gera as tabelas de cada site(Casas Bahia, Magazine Luiza, etc.).
-* `update_CasasBahia.py`: Script que carrega os dados da pasta Casas Bahia e encontra todos os links que possui dados ausentes. Os dados que já foram obtidos são mantidos como estão. Executa indefinitivamente até todos os links forem obtidos. 
-* `update_MagazineLuiza.py`:  Script que carrega os dados da pasta Magazine Luiza e encontra todos os links que possui dados ausentes. Os dados que já foram obtidos são mantidos como estão. Executa indefinitivamente até todos os links forem obtidos. 
-* `update_MercadoLivre.py`:  Script que carrega os dados da pasta Mercado Livre e encontra todos os links que possui dados ausentes. Os dados que já foram obtidos são mantidos como estão. Executa indefinitivamente até todos os links forem obtidos. 
+Several different files have been created to solve this problem. Below is a list that explains the purpose of the main files and folders in these directories.
 
-## Como utilizar
+* [`GIFS/`](./GIFS): Folder containing the GIFs used for the README.
+* [`Casas Bahia/`](./Casas%20Bahia): Directory with CSV files containing collected and non-collected data for Casas Bahia websites, collection logs, exception logs.
+* [`Magazine Luiza/`](./Magazine%20Luiza): Directory with CSV files containing collected and non-collected data for Magazine Luiza websites, collection logs, exception logs.
+* [`Mercado Livre/`](./Mercado%20Livre): Directory with CSV files containing collected and non-collected data for Mercado Livre websites, collection logs, exception logs.
+* [`MongoDB/`](./MongoDB): Scripts for database creation and a Jupyter notebook for running queries with basic use cases (filters, search, and export).
+* [`header_rotation.py`](./header_rotation.py): Used to organize headers, user agents, and random selection used for HTTP requests.
+* [`multithread_df.py`](./multithread_df.py): Define a function that receives a dataframe and a function as inputs. Multiple threads are used to split the dataframe and apply the function's operations on the dataframe.
+* [`parser.py`](./parser.py): Script containing the function used to iterate over the links. For each link, an HTTP request is made, and the returned web content is analyzed for data extraction using BeautifulSoup.
+* [`prepara_offers.py`](./prepara_offers.py):  Entry point script. It uses `offers.csv` to obtain the links and generates the tables for each site (Casas Bahia, Magazine Luiza, etc.).
+* [`update_CasasBahia.py`](./update_CasasBahia.py): Script that loads data from the Casas Bahia folder and finds all links with missing data. The data that has already been obtained is kept as is. It runs indefinitely until all links have been obtained.
+* [`update_MagazineLuiza.py`](./update_MagazineLuiza.py):  Script that loads data from the Magazine Luiza folder and finds all links with missing data. The data that has already been obtained is kept as is. It runs indefinitely until all links have been obtained.
+* [`update_MercadoLivre.py`](./update_MercadoLivre.py): Script that loads data from the Mercado Livre folder and finds all links with missing data. The data that has already been obtained is kept as is. It runs indefinitely until all links have been obtained.
 
-O primeiro passo é executar o Script `prepara_offers.py`. Este script reinicia todos os CSVs e logs para que os únicos dados no dataframe sejam os links. Pode ser necessário ajustar o diretório (como executei em uma IDE pré-configurada, não tive problemas).
+## How to use this repository
 
-Em sequência, pode-se executar qualquer um dos scripts `update_CasasBahia.py`, `update_MazineLuiza.py` ou  `update_MercadoLivre.py`. Eles podem ser executados em paralelo. Cada script inicia o processo de requisições utilizando todos os links, e pausa por um tempo (em torno) de 15 minutos. Cada script utiliza múltiplas threads, então pode ser pesado executá-los na máquina local. Utilizar uma máquina virtual na nuvem com alto poder de processamento é uma possibilidade interessante, onde um grande número de threads poderia ser utilizado. Temos abaixo um exemplo da execução dos scripts utilizando apenas 200 links de cada site foi disponibilizado. Para compreender o por que nem todos sites retornaram todos os links, veja a seção de resultados. Um pequeno corte foi adicionado para a coleta dos links da Magazine Luiza e Mercado Livre, pois eles são mais demorados. 
+The first step is to execute the prepara_offers.py script. This script resets all the CSVs and logs so that the only data in the dataframe are the links. It may be necessary to adjust the directory (as I executed it in a pre-configured IDE, I had no issues).
+
+Next, you can execute any of the scripts [`update_CasasBahia.py`](./update_CasasBahia.py), [`update_MagazineLuiza.py`](./update_MagazineLuiza.py), or [`update_MercadoLivre.py`](./update_MercadoLivre.py). They can be run in parallel. Each script initiates the request process using all the links and pauses for a 15-minute interval. Each script uses multiple threads, so running them on a local machine might be resource-intensive. Using a cloud instance with high processing power is an interesting option, where a large number of threads could be utilized. Below is an example of script execution using only 200 links from each site. To understand why not all sites returned all the links, refer to the results section. A small time jump was made for collecting links from Magazine Luiza and Mercado Livre, as they take more time.
 
 ![alt text](GIFS/teste_coleta.gif)
 
-
-Quando estiver satisfeito com o número de links coletados (pode ser consultado através do log de execução), o script `MongoDB/upload_dados.py` pode ser utilizado para fazer o upload dos dados, armazenando em um cluster do MongoDB Atlas. Para isso, é necessário ter configurado um cluster com usuários de acesso e também com IPs de acesso. Para confirmar que os resultados foram realmente disponibilizados na plataforma, mostramos abaixo o schema da coleção disponibilizada através do MongoDB Compass.
+When you are satisfied with the number of collected links (which can be checked through the execution log), the [`MongoDB/upload_dados.py`](./MongoDB/upload_dados.py) script can be used to upload the data, storing it in a MongoDB Atlas cluster. For this purpose, it's necessary to have configured a cluster with access users and permitted IPs. To confirm that the results have indeed been made available on the platform, we provide below the schema of the collection displayed through MongoDB Compass.
 
 ![alt text](GIFS/teste_bd.gif)
 
 
-Para este projeto, foram configurados dois usuários. Um para fins de administração, que poderia atualizar, remover e inserir dados. Outro usuário também foi criado, este com privilégios apenas de consultas. Este usuário foi disponibilizado, e qualquer um pode utilizar as informações para acessar e consultar o banco de dados. A configuração de acesso de rede foi feita de modo que qualquer um pode acessar o banco de dados.
+For this project, two users have been configured. One for administrative purposes, capable of updating, removing, and inserting data. Another user has also been created, with access limited to querying. This user has been made available, and anyone can use the information to access and query the database. The network access configuration has been set up in a way that allows anyone to access the database. This information was made available since this is a trial instance with limited resources to showcase this project. Normally, credentials wouldn't be published and we could instead have a REST API receive public user requests and return results, without having the risk of the public accessing any secrets or making any undesired changes to the data.
 
 ```
 user: public_user
@@ -56,7 +60,7 @@ password: KiwhjUOdauK06lzg
 collection: links_ofertas
 ```
 
-Para conexões no Python, utilize *PyMongo* com este usuário:
+For connections with Python, we can use the `PyMongo` package and the public credentials to query the data with a Python client:
 
 ```
 client = pymongo.MongoClient("mongodb+srv://public_user:KiwhjUOdauK06lzg@cluster-desafiobirdie.43lqn.mongodb.net/links_ofertas?retryWrites=true&w=majority")
@@ -64,21 +68,21 @@ db = client.dados_links
 
 ```
 
-## Resultados obtidos
+## Results
 
-Para os diferentes sites, foi necessário adotar diferentes estratégias para tentar coletar o máximo de conteúdo possível. Logo, diferentes resultados foram encontrados. 
+Different strategies were necessary for collecting the maximum amount of content from the various retailers.
 
-Para os links da Casas Bahia conseguimos coletar 6.080 de 6.080 links. A coleta foi finalizada em 3 execuções utilizando 12 threads.  A partir da primeira execução, que durou 5 minutos, 6.076 links já haviam sido coletados. O delay adotado foi de 15 minutos.
+For Casas Bahia links, we managed to collect 6,080 out of 6,080 links. The collection was completed in 3 runs using 12 threads. From the first run, which lasted 5 minutes, 6,076 links were already collected. The delay used for retrying the collection was 15 minutes.
 
-Para os links do Mercado Livre conseguimos obter 340 de 340 links, e 14.073 de 16.167 do Produtos Mercado Livro (Possui estrutura diferente da página que é apenas Mercado Livre, por isso tratamos como separado). O processo de coleta deste foi o mais demorado, onde foi necessário executar o script ao longo de dois dias. A partir dos 10.477 links iniciais que foram coletados em uma única execução, aparentemente os links restantes necessitavam de múltiplas tentativas de acesso para carregar a página. Isto foi confirmado através de acesso de links manuais. Para a coleta, 10 execuções foram realizadas com 12 threads e 20 execuções foram realizadas com 12 threads, dando um total de 30 execuções. Delays tanto de 5 minutos quanto 15 minutos foram utilizados.
+For the Mercado Livre links, we obtained 340 out of 340 links, and 14,073 out of 16,167 from Produtos Mercado Livre (which has a different structure from the regular Mercado Livre page, hence treated separately). The collection process for this site was the most time-consuming, requiring the script to be executed over two days. Starting from the initial 10,477 links collected in a single run, it appeared that the remaining links needed multiple access attempts to load the page. This was confirmed through manual link access. For the collection, 10 runs with 12 threads each and 20 runs with 12 threads each were conducted, totaling 30 runs. Delays of both 5 and 15 minutes were used.
 
-Para os links da Magazine Luiza conseguimos obter 4.231 de 17.413 links. Para a coleta 3 execuções foram realizadas utilizando 12 threads e 9 execuções foram realizadas utilizando 6 threads. A partir da terceira execução nenhum link adicional foi encontrado. Inicialmente um delay de 5 minutos foi utilizado, porém, para tentar melhorar os resultados, um delay de 15 minutos foi adotado posteriormente. Também acessamos algumas dezenas de links aleatórios manualmente e eles não funcionaram. Vale ressaltar que conseguimos acessar alguns links "novos" obtidos manualmente do site da Magazine Luiza, logo, é válido sugerir que não há problemas no script necessariamente. Pode ser também que algo esteja errado com o cabeçalho utilizado, mas inúmeros testes foram realizados e esta questão ficou em aberta. Seria possível extrair novos links para melhorar este resultado, mas fazer isto fugia do escopo do desafio e necessitaria de mais alguns dias. 
+For the Magazine Luiza links, we obtained 4,231 out of 17,413 links. The collection involved 3 runs with 12 threads and 9 runs with 6 threads. No additional links were found after the third run. Initially, a 5-minute delay was used, but to improve results, a 15-minute delay was later adopted. We also manually accessed a few dozen random links, and they didn't work. It's worth noting that we managed to access some "new" links obtained manually from the Magazine Luiza website, suggesting that the script isn't necessarily problematic. It's also possible that something might be wrong with the header used, but numerous tests were conducted, and this issue remained unresolved. It would be possible to extract new links to improve this result, but doing so would go beyond the scope of the challenge and would require a few more days.
 
-Temos um exemplo de uma aplicação no Notebook Jupyter disponibilizado no arquivo `MongoDB/consumo_dados.ipynb`, que cria uma conexão com o banco de dados e define alguns queries escritos em Python. Utilizamos os queries para criar uma simples interface gráfica onde o usuário pode digitar os filtros que deseja utilizar, e o resultado da consulta é aberto como uma tabela no Dash. Observação: Para funcionar, é necessário ter configurado o Jupyter Dash. 
+
+We have an example of an application in the provided Jupyter Notebook file [`MongoDB/consumo_dados.ipynb`](MongoDB/consumo_dados.ipynb), which establishes a connection to the database and runs some queries with Python. We use these queries to create a simple graphical interface where the user can input the desired filters, and the query results are displayed as a table in Dash. Note: To make it work, it's necessary to have Jupyter Dash configured.
 
 ![alt text](GIFS/teste_consulta.gif)
 
-No mesmo arquivo de exemplo, uma consulta também foi escrita para encontrar o preço mínimo, médio e máximo de um produto nos quatro sites diferentes (Casas Bahia, Magazine Luiza, Mercado Livre e Produto Mercado Livre). Criamos uma aplicação dash que faz esta consulta para três marcas de celulares diferentes, e permite ver três gráficos interativos diferentes com um dropdown, que permite selecionar a marca do celular, que como consequência atualiza o gráfico.
-
+In the same example file, a query was also written to find the minimum, average, and maximum prices of a product on four different sites (Casas Bahia, Magazine Luiza, Mercado Livre, and Produto Mercado Livre). We have created a Dash application that executes this query for three different mobile phone brands, enabling the visualization of three distinct interactive graphs through a dropdown menu. This dropdown menu allows the selection of a cellphone brand, which subsequently updates the graph accordingly.
 
 ![alt text](GIFS/teste_plots.gif)
